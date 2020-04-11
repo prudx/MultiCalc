@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RatioCalculator.Views.ItemsPage"
+             Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Left side" FontSize="Small" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="" FontSize="Small" Grid.Row="0" Grid.Column="1"/>
+                    <Label Text="Right side" FontSize="Small" Grid.Row="0" Grid.Column="2"/>
+
+                    <Entry Text="{Binding Ratio.Left}" FontSize="Small" Grid.Row="1" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    <Label Text=":" FontSize="Small" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+                    <Entry Text="{Binding Ratio.Right}" FontSize="Small" Grid.Row="1" Grid.Column="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="" Grid.Row="2" Grid.Column="0"></Label>
+                    <Label Text="Calculations" HorizontalTextAlignment="Center" FontSize="Large"  Grid.Row="2" Grid.Column="1"></Label>
+                    <Label Text="" Grid.Row="2" Grid.Column="2"></Label>
+
+                    <Entry Text="{Binding Ratio.Left}" FontSize="Small" Grid.Row="3" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    <Label Text=":" FontSize="Small" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="1"/>
+                    <Entry Text="{Binding Ratio.Right}" FontSize="Small" Grid.Row="3" Grid.Column="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+
+                </Grid>
+            
+            </Grid>
+        </StackLayout>
+
+
+
+        <!--
+        <RelativeLayout  Margin="20" HorizontalOptions="CenterAndExpand">
+            <StackLayout>
+                <Label Text="Left side" FontSize="Small" HorizontalTextAlignment="Center"/>
+                <Entry Text="{Binding Ratio.Left}" FontSize="Small" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text=""/>
+                <Label Text=":" FontSize="Small" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Right side" FontSize="Small" HorizontalTextAlignment="Center" />
+                <Entry Text="{Binding Ratio.Right}" FontSize="Small" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </RelativeLayout>
+        -->
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,1 @@
+C:\Users\dnlma\Documents\Code\Apps\RatioCalculator\RatioCalculator\RatioCalculator.UWP\RatioCalculator.UWP.csproj;x86
